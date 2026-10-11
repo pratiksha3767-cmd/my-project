@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Mini Fresh Basket</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="/"><img src="/static/images/logo.png" alt="Mini Fresh Basket"></a>
+  <nav><a href="/">Shop</a><a href="/cart">🛒 Cart</a><span id="authArea"></span></nav>
+</header>
+
+<main class="checkout-page">
+  <div class="checkout-head">
+    <div><p class="eyebrow">MINI FRESH BASKET</p><h1>Secure Checkout</h1><p>Enter delivery details, review your bill and choose a payment method.</p></div>
+  </div>
+
+  <div id="checkoutMessage" class="message"></div>
+  <div class="checkout-layout">
+    <section class="panel">
+      <h2>1. Customer & Delivery Details</h2>
+      <form id="checkoutForm">
+        <div class="form-grid">
+          <label>Full Name<input id="cName" required maxlength="60" placeholder="Enter your full name"></label>
+          <label>Mobile Number<input id="cPhone" required maxlength="10" inputmode="numeric" placeholder="10-digit mobile number"></label>
+          <label>Email<input id="cEmail" type="email" required placeholder="example@email.com"></label>
+          <label>City<input id="cCity" required maxlength="60" placeholder="Mumbai"></label>
+        </div>
+        <label>Delivery Address<textarea id="cAddress" required maxlength="250" placeholder="House/Flat, street, area..."></textarea></label>
+        <label>PIN Code<input id="cPincode" required maxlength="6" inputmode="numeric" placeholder="400001"></label>
+
+        <h2 class="payment-title">2. Payment Method</h2>
+        <div class="payment-options">
+          <label class="payment-card"><input type="radio" name="payment" value="COD" checked><span><b>Cash on Delivery</b><small>Pay when your order arrives.</small></span></label>
+          <label class="payment-card"><input type="radio" name="payment" value="UPI"><span><b>UPI</b><small>Pay securely via Razorpay UPI apps.</small></span></label>
+          <label class="payment-card"><input type="radio" name="payment" value="CARD"><span><b>Card</b><small>Pay securely via Razorpay card checkout.</small></span></label>
+        </div>
+        <div id="onlinePaymentNote" class="demo-note hidden">UPI and card payments open the secure Razorpay checkout. Real payment requires your Razorpay API keys in the .env file. Never enter card/UPI credentials directly on this website.</div>
+        <button id="placeOrderBtn" class="btn full" type="submit">Place Order</button>
+      </form>
+    </section>
+
+    <aside class="panel bill-card">
+      <h2>3. Order Summary</h2>
+      <div id="summaryItems"></div>
+      <div class="bill-line"><span>Subtotal</span><b>₹<span id="subtotal">0.00</span></b></div>
+      <div class="bill-line"><span>Delivery</span><b>₹<span id="delivery">0.00</span></b></div>
+      <div class="bill-line"><span>Tax</span><b>₹<span id="tax">0.00</span></b></div>
+      <div class="bill-total"><span>Grand Total</span><b>₹<span id="grandTotal">0.00</span></b></div>
+      <p class="small-note">Free delivery on orders of ₹499 or more.</p>
+    </aside>
+  </div>
+</main>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="/static/js/checkout.js"></script>
+</body>
+</html>

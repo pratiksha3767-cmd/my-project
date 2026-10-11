@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Mini Fresh Basket</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="brand" href="/">
+            <img src="/static/images/logo.png" alt="Mini Fresh Basket">
+        </a>
+        <nav>
+            <a href="/">Shop</a>
+            <button class="linkbtn" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+    <main class="admin">
+        <div class="page-heading">
+            <div>
+                <p class="eyebrow">MANAGEMENT</p>
+                <h1>Admin Dashboard</h1>
+            </div>
+        </div>
+        <div class="admin-grid">
+            <section class="panel">
+                <h2>Add Product</h2>
+                <form id="productForm">
+                    <input id="pname" placeholder="Product name" required>
+                    <input id="pcategory" placeholder="Category (e.g. Fruits)" required>
+                    <input id="pprice" type="number" min="0" step="0.01" placeholder="Price" required>
+                    <input id="punit" placeholder="Unit e.g. 1 kg" required>
+                    <input id="pstock" type="number" min="0" placeholder="Stock" required>
+                    <label for="pimage">Product photo (JPG, PNG, WEBP or GIF, up to 5 MB)</label>
+                    <input id="pimage" type="file" accept="image/jpeg,image/png,image/webp,image/gif">
+                    <label for="pimageUrl">Or use a photo URL</label>
+                    <input id="pimageUrl" type="url" placeholder="https://example.com/product.jpg">
+                    <div id="imagePreviewWrap" class="image-preview-wrap hidden">
+                        <img id="imagePreview" alt="Product image preview">
+                    </div>
+                    <input id="pdesc" placeholder="Description">
+                    <button type="submit" class="btn">Add Product</button>
+                </form>
+                <p id="pmsg" class="message" role="status"></p>
+            </section>
+            <section class="panel">
+                <h2>Products</h2>
+                <div id="adminProducts"></div>
+            </section>
+        </div>
+        <section class="panel">
+            <h2>Customers</h2>
+            <p class="small-note">Customer contact and delivery details saved during registration/checkout.</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTable"></tbody>
+                </table>
+            </div>
+        </section>
+        <section class="panel">
+            <h2>Orders & Bills</h2>
+            <div id="ordersList"></div>
+        </section>
+    </main>
+
+    <script src="/static/js/admin.js"></script>
+
+</body>
+
+</html>

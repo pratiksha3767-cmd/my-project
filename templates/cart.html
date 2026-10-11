@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Mini Fresh Basket</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header class="header">
+    <a class="brand" href="/">
+        <img src="/static/images/logo.png" alt="Mini Fresh Basket">
+    </a>
+    <nav>
+        <a href="/">Home</a>
+        <span id="authArea"></span>
+    </nav>
+</header>
+<main class="cart-page">
+    <div class="page-heading">
+        <div>
+            <p class="eyebrow">YOUR SHOPPING BAG</p>
+            <h1>Your Cart</h1>
+        </div>
+        <a href="/" class="btn secondary">Continue Shopping</a>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-bottom">
+        <div class="checkout-box">
+            <h3>Cart Total: ₹<span id="total">0</span></h3>
+            <p class="small-note">You will enter customer details and payment on the next page.</p>
+            <button id="checkoutBtn" class="btn" onclick="goCheckout()">Proceed to Checkout</button>
+            <p id="message" class="message"></p>
+        </div>
+    </div>
+</main>
+<script src="/static/js/cart.js"></script>
+</body>
+</html>

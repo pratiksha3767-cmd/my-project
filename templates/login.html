@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mini Fresh Basket</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-card">
+        <img src="/static/images/logo.png" class="auth-logo">
+        <h2>Welcome Back</h2>
+        <p>Login to continue shopping.</p>
+        <form id="loginForm">
+            <input id="email" type="email" placeholder="Email" required>
+            <div class="password-field"><input id="password" type="password" placeholder="Password" required autocomplete="current-password"><button class="password-toggle" type="button" data-password-target="password" aria-label="Show password" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">◉</span><span class="toggle-label">Show</span></button></div>
+            <button class="btn full">Login</button>
+            <p id="message" class="message"></p>
+        </form>
+        <p class="forgot-link"><a href="/forgot-password">Forgot password? Get an email OTP</a></p>
+        <p>New customer? <a href="/register">Create account</a></p>
+        <a href="/">← Back to shop</a>
+    </div>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

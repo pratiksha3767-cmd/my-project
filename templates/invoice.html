@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice - Mini Fresh Basket</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="invoice-page" data-order-id="{{ order_id }}">
+<header class="header no-print">
+  <a class="brand" href="/"><img src="/static/images/logo.png" alt="Mini Fresh Basket"></a>
+  <nav><a href="/">Shop</a><a href="/cart">Cart</a></nav>
+</header>
+<main class="invoice-wrap">
+  <div id="invoiceMessage" class="message"></div>
+  <article id="invoice" class="invoice-card hidden"></article>
+</main>
+<script>window.ORDER_ID = document.body.dataset.orderId;</script>
+<script src="/static/js/invoice.js"></script>
+</body>
+</html>
+

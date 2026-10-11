@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Mini Fresh Basket</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-card">
+        <img src="/static/images/logo.png" class="auth-logo" alt="Mini Fresh Basket">
+        <h2>Create Account</h2>
+        <p>Register to save your customer details and place orders.</p>
+        <form id="registerForm">
+            <input id="name" placeholder="Full name" minlength="2" maxlength="50" required>
+            <input id="phone" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number" required>
+            <input id="email" type="email" placeholder="Email" required>
+            <div class="password-field"><input id="password" type="password" placeholder="Password (8+, upper/lowercase, number)" minlength="8" required autocomplete="new-password"><button class="password-toggle" type="button" data-password-target="password" aria-label="Show password" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">◉</span><span class="toggle-label">Show</span></button></div>
+            <div class="password-field"><input id="confirmPassword" type="password" placeholder="Confirm password" required autocomplete="new-password"><button class="password-toggle" type="button" data-password-target="confirmPassword" aria-label="Show password" aria-pressed="false"><span class="toggle-icon" aria-hidden="true">◉</span><span class="toggle-label">Show</span></button></div>
+            <button class="btn full">Register</button>
+            <p id="message" class="message"></p>
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

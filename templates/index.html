@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Mini Fresh Basket</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <a class="brand" href="/">
+                <img src="/static/images/logo.png" alt="Mini Fresh Basket">
+            </a>
+            <div class="search">
+                <input id="searchInput" placeholder="Search groceries...">
+                <button onclick="loadProducts()">🔍</button>
+            </div>
+            <nav>
+                <a href="/cart"> Cart <span id="cartCount">0</span></a>
+                <span id="authArea"></span>
+            </nav>
+        </header>
+        <section class="hero">
+            <div>
+                <h1>Fresh groceries, delivered to your doorstep.</h1>
+                <p>Freshness • Quality • At Your Doorstep</p>
+                <a class="btn" href="#products">Shop Now</a>
+            </div>
+            <img src="/static/images/logo.png" alt="Fresh Basket">
+        </section>
+        <main id="products">
+            <div class="section-title">
+                <h2>Shop Groceries</h2>
+                <select id="category" onchange="loadProducts()">
+                    <option>All</option>
+                    <option>Fruits</option>
+                    <option>Vegetables</option>
+                    <option>Dairy</option>
+                    <option>Bakery</option>
+                    <option>Eggs</option>
+                    <option>Staples</option>
+                    <option>Beverages</option>
+                    <option>Snacks</option>
+                </select>
+            </div>
+            <div id="productGrid" class="product-grid"></div>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div><h3>Mini Fresh Basket</h3><p>Fresh groceries. Fair prices. Fast convenience.</p></div>
+                <div><h4>Contact Us</h4><p>Email: <a href="mailto:pratiksha3767@gmail.com">pratiksha3767@gmail.com</a></p><p>Customer support: Monday–Saturday</p></div>
+                <div><h4>Quick Links</h4><p><a href="/login">Login</a> · <a href="/register">Register</a> · <a href="/forgot-password">Reset Password</a></p></div>
+            </div>
+            <div class="footer-bottom">© 2026 Mini Fresh Basket · Made with care for your daily needs.</div>
+        </footer>
+        <script src="/static/js/app.js"></script>
+    </body>
+</html>
