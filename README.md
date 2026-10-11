@@ -386,4 +386,5 @@ Mini Fresh Basket is a practical demo of a grocery order management and storefro
 4. Open **Forgot password?** on the Login page. A 6-digit OTP is emailed to the registered address, expires in 10 minutes, and is limited to five attempts. The app never emails a user's old password; it securely resets it after OTP verification.
 5. Restart with `python app.py`. Real email delivery needs working internet access and valid SMTP credentials.
 #   p r a t i k s h a 1 2 4  
+ #   m i n i _ f r e s h _ b a s k e t  
  
